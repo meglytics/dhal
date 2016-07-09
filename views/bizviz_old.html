@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>BizViz</title>
+
+  <!-- Viewport mobile tag for sensible mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/keen-dashboards.css" />
+
+  <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="navbar-brand" href="./">Meglytics - BizViz</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="wrapper">
+
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+
+        <li class="sidebar-brand">
+          <a data-toggle="modal" data-target="#exampleModal">New Dashboard</a>
+        </li>
+        <li class="sidebar-brand">
+          <a data-toggle="modal" id="report">Report</a>
+        </li>
+      </ul>
+    </div>
+
+    <!--  <div id="page-content-wrapper"> -->
+    <div class="col-sm-6">
+      <div class="chart-wrapper ">
+        <div class="chart-title">
+          chart1
+        </div>
+        <div class="chart-stage">
+          <div id="chart1" style="width: 900px; height: 300px;"></div>
+        </div>
+        <div class="chart-notes">
+          This is a sample text region to describe this chart.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 ">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Chart2
+        </div>
+        <div class="chart-stage">
+          <div id="chart2" style="width: 100px; height: 330px;"></div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="chart-wrapper">
+        <div class="chart-title">
+          Chart3
+        </div>
+        <div class="chart-stage">
+          <div id="chart3" style="width: 900px; height: 400px;"></div>
+
+        </div>
+        <div class="chart-notes">
+          Notes go down here
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 ">
+      <div class="chart-wrapper ">
+        <div class="chart-title">
+          Chart4
+        </div>
+        <div class="chart-stage">
+          <div id="chart4" style="width: 900px; height: 400px;"></div>
+        </div>
+        <div class="chart-notes">
+          This is a sample text region to describe this chart.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 ">
+      <div class="chart-wrapper ">
+        <div class="chart-title">
+          Chart4
+        </div>
+        <div class="chart-stage">
+          <div id="chart5" style="width: 900px; height: 400px;"></div>
+
+        </div>
+        <div class="chart-notes">
+          This is a sample text region to describe this chart.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 ">
+      <div class="chart-wrapper ">
+        <div class="chart-title">
+          Chart4
+        </div>
+        <div class="chart-stage">
+          <div id="chart6" style="width: 900px; height: 400px;"></div>
+
+        </div>
+        <div class="chart-notes">
+          This is a sample text region to describe this chart.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  </div> -->
+
+  <div id="exampleModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" data-dismiss="modal">
+            &times;
+          </button>
+          <h4 class="modal-title">New Dashboard</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4">
+              <label for="exampleInputEmail1">Query</label>
+              <input type="text" name="host" id="query">
+            </div>
+            <div class="col-md-4">
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                  Dropdown Example
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="modal_select">
+                  <li>
+                    <a href="#" id="modal_area">Area</a>
+                  </li>
+                  <li>
+                    <a href="#" id="modal_pie">Pie</a>
+                  </li>
+                  <li>
+                    <a href="#" id="modal_bar">Bar</a>
+                  </li>
+                  <li>
+                    <a href="#" id="modal_line">Line</a>
+                  </li>
+                  <li>
+                    <a href="#" id="modal_geo">Geo</a>
+                  </li>
+                  <li>
+                    <a href="#" id="modal_column">Column</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+
+              <button type="button" class="btn btn-default" id="analyze">
+                Analyze
+              </button>
+            </div>
+          </div>
+          <div id="modal_chart" style="width: 900px; height: 400px;"></div>
+
+          <!-- </form> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" id="save" class="btn btn-default" data-dismiss="modal">
+            Save
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/js/jquery-2.2.0.min.js"></script>
+  <!-- Google charts -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <!-- KEEN dash -->
+  <script type="text/javascript" src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/lib/holderjs/holder.js"></script>
+  <script>
+    Holder.add_theme("white", {
+      background: "#fff",
+      foreground: "#a7a7a7",
+      size: 10
+    });
+  </script>
+
+  <!--SCRIPTS END-->
+
+  <script type="text/javascript">
+    localStorage.setItem("workbench", "fooWorkbench") //NOTE: THIS WILL BE REMOVED AND WORKBENCH WILL BE STORED IN MCONNECT
+    var chart_selected = '';
+    var chartObjs = {};
+    var ndata = '';
+    var query = '';
+    var wb = localStorage.getItem("workbench");
+
+    var count = "count";
+    var inc = 0;
+    var ctxs = ["chart1", "chart2", "chart3", "chart4", "chart5", "chart6"];
+    localStorage.setItem(count, inc);
+
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      initModalCharts();
+    }
+
+    function transpose(a) {
+      return a[0].map(function(_, c) {
+        return a.map(function(r) {
+          return r[c];
+        });
+      });
+    }
+    //init modal charts with dummy data
+    function initModalCharts() {
+      var init_data = [
+        ['Year', '2014', '2015', '2014', '2013'],
+        ['Expenses', 800, 600, 400, 110],
+        ['Sales', 100, 1170, 555, 1123]
+      ];
+
+      var t_data = transpose(init_data);
+
+      var data = google.visualization.arrayToDataTable(t_data);
+      //  var ndata = '';
+      // Set chart options
+      /*  var options = {
+          'title': 'How Much Line chart willi draw?',
+          'width': 450,
+          'height': 300
+        }; */
+
+      var options = {
+        'title': 'MeglyticsBI',
+        'width': 475,
+        'height': 350
+      };
+
+
+      chartObjs["BarChart"] = new google.visualization.BarChart(document.getElementById('modal_chart'));
+      chartObjs["PieChart"] = new google.visualization.PieChart(document.getElementById('modal_chart'));
+      chartObjs["AreaChart"] = new google.visualization.AreaChart(document.getElementById('modal_chart'));
+      chartObjs["LineChart"] = new google.visualization.LineChart(document.getElementById('modal_chart'));
+      chartObjs["GeoChart"] = new google.visualization.GeoChart(document.getElementById('modal_chart'));
+      chartObjs["ColumnChart"] = new google.visualization.ColumnChart(document.getElementById('modal_chart'));
+
+      $("#modal_area").click(function() {
+        chart_selected = 'AreaChart'
+        new google.visualization.AreaChart(document.getElementById('modal_chart')).draw(data, options);
+
+        //  chartObjs[chart_selected].draw(data, options);
+      });
+
+      $("#modal_pie").click(function() {
+        chart_selected = 'PieChart'
+        new google.visualization.PieChart(document.getElementById('modal_chart')).draw(data, options);
+        //  chartObjs[chart_selected].draw(data, options);
+      });
+
+      $("#modal_bar").click(function() {
+        chart_selected = 'BarChart'
+        new google.visualization.BarChart(document.getElementById('modal_chart')).draw(data, options);
+
+        //chartObjs[chart_selected].draw(data, options);
+      });
+
+      $("#modal_line").click(function() {
+        chart_selected = 'LineChart'
+        new google.visualization.LineChart(document.getElementById('modal_chart')).draw(data, options);
+
+        //chartObjs[chart_selected].draw(data, options);
+      });
+
+      $("#modal_geo").click(function() {
+        chart_selected = 'GeoChart'
+        new google.visualization.GeoChart(document.getElementById('modal_chart')).draw(data, options);
+
+        //chartObjs[chart_selected].draw(data, options);
+      });
+
+      $("#modal_column").click(function() {
+        chart_selected = 'ColumnChart'
+        new google.visualization.ColumnChart(document.getElementById('modal_chart')).draw(data, options);
+
+        //chartObjs[chart_selected].draw(data, options);
+      });
+
+
+      $("#analyze").click(function() {
+        query = $("#query").val();
+        var d = getQueryData(query);
+
+        ndata = new google.visualization.arrayToDataTable(d);
+        chartObjs[chart_selected].draw(ndata, options);
+      });
+
+      $("#save").click(function() {
+        var no = check();
+        var id = ctxs[no];
+
+        var cs = getChartObject(chart_selected, id);
+        cs.draw(ndata, options);
+      });
+    }
+
+    function getChartObject(c, id) {
+
+      switch (c) {
+        case 'AreaChart':
+          return new google.visualization.AreaChart(document.getElementById(id));
+          break;
+        case 'PieChart':
+          return new google.visualization.PieChart(document.getElementById(id));
+          break;
+        case 'BarChart':
+          return new google.visualization.BarChart(document.getElementById(id));
+          break;
+        case 'LineChart':
+          return new google.visualization.LineChart(document.getElementById(id));
+          break;
+        case 'GeoChart':
+          return new google.visualization.GeoChart(document.getElementById(id));
+          break;
+        case 'ColumnChart':
+          return new google.visualization.ColumnChart(document.getElementById(id));
+          break;
+      }
+
+    };
+
+    function getQueryData(query) {
+
+      var dd = [];
+
+      $.ajax({
+        type: 'POST',
+        url: '/workbench',
+        async: false,
+        data: {
+          "query": query,
+           "email": "tset",
+           "password": "pass",
+        },
+        dataType: "json",
+        success: function(data) {
+          dd = data;
+        }
+      });
+
+      return transpose(dd)
+
+    };
+
+    function check() {
+      //if goes exceeds more than 4, reset it to 1
+      var c = localStorage.getItem(count);
+      var cnt = parseInt(c);
+      if (c != 5) {
+        cnt++;
+        localStorage.setItem(count, cnt)
+        return c
+      } else if (c == 5) {
+        localStorage.setItem(count, 0)
+        return c
+      }
+    };
+
+    $("#report").click(function() {
+      $.ajax({
+        type: 'GET',
+        url: '/report',
+        async: false,
+      });
+    });
+  </script>
+</body>
+
+</html>

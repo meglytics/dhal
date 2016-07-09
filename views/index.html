@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Meglytics</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="css/styles.css" >
+        <link rel="stylesheet" href="css/intlTelInput.css">
+        <link rel="stylesheet" href="css/bootstrap.css" >
+        <link rel="stylesheet" href="css/megam.css" >
+        <link rel='stylesheet' href='css/nprogress.css'/>
+        <link rel="stylesheet" href="dashboard/css/megam.css" />
+        <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="box">
+                <div class="row">
+                    <!-- sidebar -->
+                    <div class="column col-sm-6" id="sidebar">
+                        <a class="logo" href="#"><img src="images/meglytics-logo.png" alt=""></a>
+                        <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+                            <!-- Overlay -->
+                            <div class="overlay"></div>
+
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#bs-carousel" data-slide-to="1"></li>
+                                <li data-target="#bs-carousel" data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item slides active">
+                                    <div class="slide-1"></div>
+                                    <div class="hero">
+                                        <hgroup>
+                                            <img src="images/slider-1.png" alt="" >
+                                            <h3>data + analytics = business intelligence </h3>
+                                        </hgroup>
+                                    </div>
+                                </div>
+                                <div class="item slides">
+                                    <div class="slide-2"></div>
+                                    <div class="hero">
+                                        <hgroup>
+                                            <img src="imgs/slider-2.png" alt="" >
+                                            <h3>Easy access to multiple data source
+                                            <br>
+                                            - an image with SQL, excel, csv</h3>
+                                        </hgroup>
+                                    </div>
+                                </div>
+                                <div class="item slides">
+                                    <div class="slide-3"></div>
+                                    <div class="hero">
+                                        <hgroup>
+                                            <img src="imgs/slider-3.png" alt="" >
+                                            <h3>Hassle free BI with insightful report </h3>
+                                        </hgroup>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /sidebar -->
+
+                    <!-- main -->
+                    <div class="column col-sm-6" id="main">
+                        <div class="padding">
+                            <div class="full col-sm-12 padg">
+
+                                <!-- content -->
+
+                                <div class="col-sm-12" id="featured">
+                                    <div class="panel panel-login">
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                                <a href="#" class="active col-xs-6 hglts" id="login-form-link">Log in</a><a href="#" id="register-form-link" class="col-xs-6 hglts">Sign Up</a>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <% if (message.length > 0) { %>
+                                                <div class="alert alert-danger">
+                                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                                    <strong>Error! </strong><%= message %>
+                                                </div>
+                                                <% } %>
+                                                <div class="col-lg-8 col-lg-offset-2">
+                                                    <div class="form-horizontal" id="login-form">
+                                                        <div class="form-group">
+                                                            <input type="text" name="email" id="semail" tabindex="1" class="form-control" placeholder="Email" value="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="password" name="password" id="spassword" tabindex="2" class="form-control" placeholder="Password">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="button" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login btn-alter" value="Login">
+
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <a href="#" tabindex="5" class="forgot-password">Forgot Password?</a>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-horizontal" id="register-form" style="display: none;">
+                                                        <div class="form-group">
+                                                            <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Name" value="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input id="phone" type="tel" name="phone" tabindex="2" class="form-control" placeholder="Phone Number">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register btn-alter" value="Register Now">
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--/top story-->
+
+                                <!--/stories-->
+
+                            </div>
+                            <!-- /col-9 -->
+                        </div>
+                        <!-- /padding -->
+                    </div>
+                    <!-- /main -->
+                </div>
+            </div>
+        </div>
+        <div id="notifications"></div>
+        <!-- script references -->
+        <script src="js/jquery-2.2.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/nprogress.js"></script>
+        <script src="portal/signin.js"></script>
+        <script src="portal/ui/notifications.js"></script>
+        <script>
+			$(function() {
+
+				$('#login-form-link').click(function(e) {
+					$("#login-form").delay(100).fadeIn(100);
+					$("#register-form").fadeOut(100);
+					$('#register-form-link').removeClass('active');
+					$(this).addClass('active');
+					e.preventDefault();
+				});
+				$('#register-form-link').click(function(e) {
+					$("#register-form").delay(100).fadeIn(100);
+					$("#login-form").fadeOut(100);
+					$('#login-form-link').removeClass('active');
+					$(this).addClass('active');
+					e.preventDefault();
+				});
+
+			});
+
+        </script>
+        <script src="js/intlTelInput.js"></script>
+        <script>
+			$("#phone").intlTelInput({
+				// allowExtensions: true,
+				// autoFormat: false,
+				// autoHideDialCode: false,
+				// autoPlaceholder: false,
+				// dropdownContainer: $("body"),
+				// excludeCountries: ["us"],
+				// geoIpLookup: function(callback) {
+				//   $.get('http://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+				//     var countryCode = (resp && resp.country) ? resp.country : "";
+				//     callback(countryCode);
+				//   });
+				// },
+				// initialCountry: "auto",
+				// nationalMode: false,
+				// numberType: "MOBILE",
+				// onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+				// preferredCountries: ['cn', 'jp'],
+				// utilsScript: "lib/libphonenumber/build/utils.js"
+			});
+        </script>
+    </body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Meglytics | Dashboard</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+  <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+  <!-- GLOBAL STYLES -->
+  <link rel="stylesheet" href="dashboard/css/bootstrap.css" />
+  <link rel="stylesheet" href="dashboard/css/main.css" />
+  <link rel="stylesheet" href="dashboard/css/theme.css" />
+  <link rel="stylesheet" href="dashboard/css/MoneAdmin.css" />
+  <link rel="stylesheet" href="dashboard/css/megam.css" />
+  <link rel="stylesheet" href="assets/css/keen-dashboards.css" />
+  <link rel="stylesheet" href="assets/css/simple-sidebar.css" >
+  <link rel="stylesheet" href="dashboard/fonts/css/font-awesome.min.css" >
+  <link rel="stylesheet" href="dashboard/css/layout2.css"  />
+  <link rel="stylesheet" href="dashboard/css/mconnect-styles.css"  />
+  <!-- END PAGE LEVEL  STYLES -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+
+<body class="padTop53 ">
+  <!-- MAIN WRAPPER -->
+  <div id="wrap">
+    <% include header.html %>
+    <div id="">
+      <div class="inner" style="min-height: 700px;">
+        <!--     <div style="width:100%; height:auto; min-height:50px; background:#F5F5F5;"></div>-->
+
+        <div class="container1">
+          <div class="top-warps">
+            <div class="col-sm-2">
+              <a data-toggle="modal" role="button" class="btn btn-success" data-target="#exampleModal">New Dashboard</a>
+            </div>
+            <div class="col-sm-10">
+              <div class="scroller scroller-left">
+                <i class="fa fa-chevron-left"></i>
+              </div>
+              <div class="scroller scroller-right">
+                <i class="fa fa-chevron-right"></i>
+              </div>
+              <div class="wrapper">
+                <ul id="pageTab" class="nav nav-tabs list">
+                  <li class="active">
+                    <a href="#page1" data-toggle="tab">New Dash</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="pageTabContent" class="tab-content">
+            <div class="tab-pane active" id="page1">
+              <div class="">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bhoechie-tab-container">
+                  <div class="col-lg-2 col-md-3 col-sm-3 col-xs-5 bhoechie-tab-menu">
+
+                    <div class="list-group">
+                      <a href="#" class="list-group-item active text-center">
+                        <h4 class="fa fa-floppy-o"></h4> Save </a>
+                      <a href="#" class="list-group-item text-center">
+                        <h4 class="fa fa-line-chart"></h4> M-Connect</a>
+
+                      <h5>My-Dashboards</h5>
+                      <table width="88%" border="0" cellspacing="0" cellpadding="0" align="center">
+                        <tr style="background:#E9E9E9">
+                          <td align="center" style="background:#E9E9E9">m-hospital</td>
+                        </tr>
+                        <tr style="background:#E9E9E9">
+                          <td align="center" style="background:#E9E9E9">m-ecommerce</td>
+                        </tr>
+                        <tr style="background:#E9E9E9">
+                          <td align="center" style="background:#E9E9E9">m-hotel</td>
+                        </tr>
+
+
+                      </table>
+
+                      <!-- Button trigger modal -->
+
+                      <!-- Modal -->
+                      <div id="exampleModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" data-dismiss="modal">
+                                &times;
+                              </button>
+                              <h4 class="modal-title">New Dashboard</h4>
+                            </div>
+                            <div class="modal-body">
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <label >Query</label>
+                                  <input type="text" name="host" id="query">
+                                </div>
+                                <div class="col-md-4 toppad" >
+                                  <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                       Choose your charts
+                                      <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" id="modal_select">
+                                      <li>
+                                        <a href="#" id="modal_area">Area</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" id="modal_pie">Pie</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" id="modal_bar">Bar</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" id="modal_line">Line</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" id="modal_geo">Geo</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" id="modal_column">Column</a>
+                                      </li>
+                                      <li>
+                                        <a href="#" id="modal_table">Table</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+
+                                  <button type="button" class="btn btn-default toppad" id="analyze">
+                                    Analyze
+                                  </button>
+                                </div>
+                              </div>
+                              <div id="modal_chart" style="width: 300px; height: 300px;"></div>
+
+                              <!-- </form> -->
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Close
+                              </button>
+                              <button type="button" id="save" class="btn btn-default" data-dismiss="modal">
+                                Save
+                              </button>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <!-- Button trigger modal -->
+                      <!-- Modal -->
+                      <div class="modal fade" id="myModlNorm" tabindex="-1" role="dialog" aria-labelledby="myModlLabel" aria-hidden="true">
+                        <div class="modl-dialog">
+                          <div class="modl-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Close</span>
+                              </button>
+                              <h4 class="modal-title" id="myModalLabel"> New M Coonect </h4>
+                            </div>
+
+                            <!-- Modal Body -->
+                            <div class="modal-body">
+                              <form class="form-horizontal">
+                                <div class="form-group">
+                                  <label class="col-sm-4 control-label text-right" for="inputEmail3">Name</label>
+                                  <div class="col-sm-8">
+                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Name" />
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="col-sm-offset-4 col-sm-6">
+                                    <button type="submit" class="btn btn-success">
+                                      Create
+                                    </button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+
+                            <!-- Modal Footer -->
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Post Info -->
+                    </div>
+                  </div>
+                  <div id="wrapper">
+
+                    <!--  <div id="page-content-wrapper"> -->
+                    <div class="col-sm-6">
+                      <div class="chart-wrapper ">
+                        <div class="chart-title">
+                          Chart-1
+                        </div>
+                        <div class="chart-stage">
+                          <div id="chart1" style="width: 500px; height: 300px;"></div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 ">
+                      <div class="chart-wrapper">
+                        <div class="chart-title">
+                          Chart-2
+                        </div>
+                        <div id="chart2" style="width: 500px; height: 330px;"></div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 ">
+                      <div class="chart-wrapper">
+                        <div class="chart-title">
+                          Chart-3
+                        </div>
+                        <div class="chart-stage">
+                          <div id="chart3" style="width: 500px; height: 330px;"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 ">
+                      <div class="chart-wrapper">
+                        <div class="chart-title">
+                          Chart-4
+                        </div>
+                        <div class="chart-stage">
+                          <div id="chart4" style="width: 500px; height: 330px;"></div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="col-sm-6 ">
+                      <div class="chart-wrapper">
+                        <div class="chart-title">
+                          Chart-5
+                        </div>
+                        <div class="chart-stage">
+                          <div id="chart5" style="width: 100px; height: 330px;"></div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="col-sm-6 ">
+                      <div class="chart-wrapper">
+                        <div class="chart-title">
+                          Chart-6
+                        </div>
+                        <div class="chart-stage">
+                          <div id="chart6" style="width: 100px; height: 330px;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--BLOCK SECTION -->
+        <!--END BLOCK SECTION -->
+        <hr />
+      </div>
+    </div>
+
+  </div>
+  <!--END MAIN WRAPPER -->
+  <!-- FOOTER -->
+
+  <!--END FOOTER -->
+  <!-- GLOBAL SCRIPTS -->
+  <script src="js/jquery-2.2.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="portal/bizviz.js"></script>
+  <script src="portal/nodes.js"></script>
+        <script src="portal/ui/notifications.js"></script>
+  <script type="text/javascript" src="js/bootstrap-filestyle.js"></script>
+
+
+  <!-- END PAGE LEVEL SCRIPTS -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <!-- KEEN dash -->
+  <script type="text/javascript" src="assets/lib/holderjs/holder.js"></script>
+  <script>
+    Holder.add_theme("white", {
+      background: "#fff",
+      foreground: "#a7a7a7",
+      size: 10
+    });
+  </script>
+
+</body>
+<!-- END BODY -->
+
+</html>

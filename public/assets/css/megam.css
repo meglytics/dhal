@@ -1,0 +1,61 @@
+input[type=radio   ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : 2em;
+  line-height  : 1.5em;
+}
+
+
+#palette-container ul {
+  list-style-type: none;
+  margin: 20px;
+  padding: 0;
+}
+
+#palette-container li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+#palette-container li:last-child {
+  border: none;
+}
+
+#palette-container li a {
+  text-decoration: none;
+  color: #000;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  display: block;
+  width: 200px;
+}
+
+#palette-container li a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}
+
+.node-table {
+    stroke: rgb(93, 114, 145);
+    stroke-width: 1;
+    border: 5px solid #4CAF50;
+    border-collapse: collapse;
+}
+
+.node-table th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+
+.node-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#sidebar {
+    margin-top:20px;
+}
