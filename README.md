@@ -12,6 +12,17 @@ This is moved to our standard DOM/rails structure based on
 
 Stay tuned for an update.
 
+## Pics 
+
+![Image of SignIn](https://github.com/meglytics/dhal/blob/master/public/mock/signup.png)
+
+![Image of NewConnector](https://github.com/meglytics/dhal/blob/master/public/mock/connectors.png)
+
+![Image of NewQuery](https://github.com/meglytics/dhal/blob/master/public/mock/newquery.png)
+
+![Image of Report](https://github.com/meglytics/dhal/blob/master/public/mock/reports.png)
+
+
 ## Quick Start
 
 1. git clone https://github.com/megamsys/bi-portal.git
